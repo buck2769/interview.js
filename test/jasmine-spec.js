@@ -1,4 +1,4 @@
-describe("Given my code", function () {
+describe("Person", function () {
 	beforeEach(function () {
 
 	});
@@ -7,14 +7,4 @@ describe("Given my code", function () {
 
 	});
 	
-	describe("When ...", function () {
-		
-		beforeEach(function () {
-			
-		});
-
-		it("Then...", function () {
-			expect(true).toEqual(true);
-		});
-	});
 });

@@ -9,25 +9,29 @@ describe("Person", function () {
 	 
   describe("object factory", function(){
     it('creates an object', function(){
+
     });
   });
 
 
   describe("event emmitter", function(){
+    var pubSub, listener;
     beforeEach(function(){
+      pubSub = createObject(new EvilPubSub());
+      listener = jasmine.createSpy('myFakeListener');
+      pubSub.subscribe(listener, 'didLogIn');
 
-    });
-
-    it("subscribes to events", function(){
-      fail();
+      expect( pubSub.getSubscribers('didLogIn').length ).toEqual( 1 );
     });
 
     it("emits events", function(){
-      fail();
+      pubSub.notify('didLogIn');
+      expect( listener ).toHaveBeenCalled();
     });
 
     it("unsubscribes", function(){
-      fail();
+      pubSub.unsubscribe('didLogIn');
+      expect( pubSub.getSubscribers('didLogIn').length ).toEqual( 0 );
     });
   });
 });

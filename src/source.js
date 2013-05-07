@@ -3,6 +3,8 @@
  *
  * 2) create an event emmiter base class 
  *
- * 3) other objects can subscribe to events
+ * 3) I want to be able to subscribe to events
+ *
+ * 4) In the future, events will be namespaced
  *
  */

@@ -9,6 +9,7 @@ describe("Person", function () {
 	 
   describe("object factory", function(){
     it('creates an object', function(){
+      fail();
     });
   });
 

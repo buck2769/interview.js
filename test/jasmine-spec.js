@@ -1,4 +1,7 @@
-describe("Person", function () {
+function fail() {
+  expect(true).toEqual(false);
+}
+describe("User", function () {
 	beforeEach(function () {
 
 	});
@@ -6,20 +9,9 @@ describe("Person", function () {
 	afterEach(function () {
 
 	});
-	 
-  describe("object factory", function(){
-    it('creates an object', function(){
-      fail();
-    });
-  });
 
-
-  describe("event emmitter", function(){
-    beforeEach(function(){
-
-    });
-
-    it("subscribes to events", function(){
+  describe("registration", function(){
+    it("subscribes to registration events", function(){
       fail();
     });
 
@@ -27,8 +19,23 @@ describe("Person", function () {
       fail();
     });
 
-    it("unsubscribes", function(){
+    it("unsubscribes from the registration event", function(){
       fail();
     });
   });
+
+  describe("login", function(){
+    it("subscribes to login events", function(){
+      fail();
+    });
+
+    it("emits events", function(){
+      fail();
+    });
+
+    it("unsubscribes from the login event", function(){
+      fail();
+    });
+  })
+
 });
